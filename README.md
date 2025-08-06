@@ -37,4 +37,7 @@ You've declared a pointer `x` and set it to `NULL`, meaning it doesn't point to 
 # Hints/Guidance
 The error message is telling you to check if `x` is pointing to a valid memory address.  Make sure you're assigning a valid memory address to `x` before you try to use it.  You might need to allocate memory using a function like `malloc()` if you want to store data in a specific location.
 ```
+## DCC Help Gemma-3N Models
+DCC Help's fine-tuned models (E4B and E2B variants) are available for download from [Hugging Face](https://huggingface.co/collections/Project-Carbon/dcc-help-gemma3n-models-6892ec859e05f65e4e748eeb).
 
+The fine-tuning details are available on the [gemma3n-sft](https://github.com/LorenzoLeeSolano/dcc-help/tree/gemma3n-sft) branch.
