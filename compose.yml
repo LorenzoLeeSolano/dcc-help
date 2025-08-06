@@ -1,5 +1,5 @@
 services:
-  dcc-help:
+  dcc-help-demo:
     build: .
     volumes:
       - ./:/workspace
@@ -11,6 +11,6 @@ services:
     security_opt: [ "seccomp:unconfined" ]
     init: true 
     environment:
-      - DCC_HELP_MODEL=hf.co/Project-Carbon/Gemma3N-E4B-DCCHelp-gguf:Q4_K_M
+      - DCC_HELP_MODEL=hf.co/Project-Carbon/Gemma3N-E2B-DCCHelp-gguf:Q4_K_M
 volumes:
   ollama_models:

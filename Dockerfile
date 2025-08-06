@@ -7,7 +7,10 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends \
         curl python3 clang valgrind \
         libclang-common-14-dev libclang-rt-14-dev \
-        gcc gdb jq python3-pip busybox
+        gcc gdb jq python3-pip busybox \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+RUN pip install --no-cache-dir --upgrade setuptools --break-system-packages
 
 # Install dcc + dcc-help
 COPY src /opt/dcc-help
