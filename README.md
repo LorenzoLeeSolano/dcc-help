@@ -17,7 +17,7 @@ docker compose exec dcc-help bash
 
 3. Compile and run some code:
 
-```bash
+```
 $ cd examples
 $ dcc test.c
 $ ./a.out
