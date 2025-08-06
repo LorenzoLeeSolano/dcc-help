@@ -16,9 +16,15 @@ RUN bash /opt/dcc-help/build.sh
 ENV PATH="/opt/dcc-help/lib:/usr/local/bin:/usr/bin/:$PATH"
 
 FROM base AS ollama
-COPY . .
 # Install ollama
 RUN curl -fsSL https://ollama.com/install.sh | sh \
  && python3 -m pip install --break-system-packages ollama
 
 WORKDIR "/workspace"
+
+COPY docker/start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+
+
+ENTRYPOINT ["/usr/local/bin/start.sh"]
+ENV SHELL=/bin/bash

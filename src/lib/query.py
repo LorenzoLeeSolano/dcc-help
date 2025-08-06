@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-import argparse, json, re, sys
+import argparse, json, re, sys, os
 from string import Template
 
 MAX_JSON_BYTES = 1000000
-DEFAULT_MODEL="hf.co/Project-Carbon/Gemma3N-E4B-DCCHelp-gguf:Q4_K_M"
+DEFAULT_MODEL= os.getenv("DCC_HELP_MODEL", "hf.co/Project-Carbon/Gemma3N-E4B-DCCHelp-gguf:Q4_K_M")
 DEFAULT_SAMPLE_CONFIG={
     'temperature': 1.0,
     'top_k': 64,
